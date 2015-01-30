@@ -50,6 +50,11 @@ def last_names(people)
 end
 
 def first_fav_genre(people)
+  collection_of_first_genres=[]
+  people.each do |person, person_data|
+    collection_of_first_genres.push person_data[:preferences][:favorite_genres][0]
+  end
+  collection_of_first_genres
 end
 
 def joes_neighbor(people)
