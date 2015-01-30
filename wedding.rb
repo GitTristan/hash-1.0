@@ -42,6 +42,11 @@ def joes_last_name(people)
 end
 
 def last_names(people)
+  collection_of_last_names=[]
+  people.each do |person, person_data|
+    collection_of_last_names.push person_data[:last_name]
+  end
+  collection_of_last_names
 end
 
 def first_fav_genre(people)
